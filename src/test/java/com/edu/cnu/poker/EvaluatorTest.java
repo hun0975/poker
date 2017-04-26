@@ -117,4 +117,18 @@ public class EvaluatorTest {
 
     }
 	
+	@Test
+    public void RANK가_5개가_연속으로이어지고_SUIT가_모두같으면_스트레이트플러쉬다(){
+        Evaluator evaluator = new Evaluator();
+        List<Card> cardList = Arrays.asList(
+                new Card(1,Suit.CLUBS),
+                new Card(2,Suit.CLUBS),
+                new Card(3,Suit.CLUBS),
+                new Card(4,Suit.CLUBS),
+                new Card(5,Suit.CLUBS)
+        );
+        String result = evaluator.evaluate_STRAIGHTFLUSH(cardList);
+        assertThat(result, is("STRAIGHTFLUSH"));
+    }
+	
 }

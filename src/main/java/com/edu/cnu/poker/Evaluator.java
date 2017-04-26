@@ -236,5 +236,43 @@ public class Evaluator {
         }
     }
 	
+	public String evaluate_ROYALFLUSH(List<Card> cardList){
+        Map<Integer, Integer> tempMap = new HashMap<Integer, Integer>();
+        int num[] = new int[5];
+        String pic[] = new String[5];
+        int i = 0;
+        boolean STR = true;
+        for (Card card : cardList) {
+            num[i] = card.getRank();
+            pic[i] = String.valueOf(card.getSuit());
+            i=i+1;
+        }
+        Arrays.sort(num);
+        for(int j = 0; j<4;j++)
+        {
+            if(num[j+1] < 10)
+            {
+                STR = false;
+                break;
+            }
+            if(pic[j+1].equals(pic[j]) == false) {
+                STR = false;
+                break;
+            }
+        }
+        if(num[0] != 1)
+        {
+            STR = false;
+        }
+
+        if(STR == false)
+        {
+            return  "NOTHING";
+        }
+        else
+        {
+            return "ROYALFLUSH";
+        }
+    }
 	
 }

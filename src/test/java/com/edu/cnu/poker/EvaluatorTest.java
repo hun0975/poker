@@ -72,4 +72,19 @@ public class EvaluatorTest {
 
     }
 	
+	@Test
+    public void RANK가_2개가_동일한것이_1세트_3개_동일한것_1세트_모두있으면_풀하우스다(){
+        Evaluator evaluator = new Evaluator();
+        List<Card> cardList = Arrays.asList(
+                new Card(1,Suit.CLUBS),
+                new Card(1,Suit.HEARTS),
+                new Card(8,Suit.SPADES),
+                new Card(8,Suit.CLUBS),
+                new Card(8,Suit.CLUBS)
+        );
+        String result = evaluator.evaluate_FULLHOUSE(cardList);
+        assertThat(result, is("FULLHOUSE"));
+
+    }
+	
 }

@@ -55,4 +55,33 @@ public class Evaluator {
             return  "NOTHING";
         }
     }
+	
+	public String evaluate_TWOPAIR(List<Card> cardList){
+        Map<Integer, Integer> tempMap = new HashMap<Integer, Integer>();
+        int one =0;
+
+        for (Card card : cardList) {
+            if (tempMap.containsKey(card.getRank())) {
+                Integer count = tempMap.get(card.getRank());
+                count = new Integer(count.intValue() + 1);
+                tempMap.put(card.getRank(), count);
+            } else {
+                tempMap.put(card.getRank(), new Integer(1));
+            }
+        }
+
+        for (Integer key : tempMap.keySet()) {
+            if (tempMap.get(key) == 2) {
+                one = one + 1;
+            }
+        }
+        if(one == 2)
+        {
+            return "TWOPAIR";
+        }
+        else{
+            return  "NOTHING";
+        }
+    }
+	
 }

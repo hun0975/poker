@@ -41,4 +41,19 @@ public class EvaluatorTest {
         assertThat(result, is("ONEPAIR"));
 
     }
+	
+	@Test
+    public void RANK가_2개가_동일한것이_2세트면_투페어다(){
+        Evaluator evaluator = new Evaluator();
+        List<Card> cardList = Arrays.asList(
+                new Card(1,Suit.CLUBS),
+                new Card(1,Suit.HEARTS),
+                new Card(8,Suit.SPADES),
+                new Card(8,Suit.CLUBS),
+                new Card(7,Suit.HEARTS)
+        );
+        String result = evaluator.evaluate_TWOPAIR(cardList);
+        assertThat(result, is("TWOPAIR"));
+
+    }
 }

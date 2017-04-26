@@ -56,4 +56,20 @@ public class EvaluatorTest {
         assertThat(result, is("TWOPAIR"));
 
     }
+	
+	@Test
+    public void RANK가_3개가_동일한것이_1세트면_트리플이다(){
+        Evaluator evaluator = new Evaluator();
+        List<Card> cardList = Arrays.asList(
+                new Card(1,Suit.CLUBS),
+                new Card(1,Suit.HEARTS),
+                new Card(1,Suit.SPADES),
+                new Card(8,Suit.CLUBS),
+                new Card(7,Suit.HEARTS)
+        );
+        String result = evaluator.evaluate_TRIPLE(cardList);
+        assertThat(result, is("TRIPLE"));
+
+    }
+	
 }

@@ -170,6 +170,36 @@ public class Evaluator {
         }
     }
 	
+	public String evaluate_STRAIGHT(List<Card> cardList){
+        Map<Integer, Integer> tempMap = new HashMap<Integer, Integer>();
+        int num[] = new int[5];
+        int i = 0;
+        boolean STR = true;
+        for (Card card : cardList) {
+            num[i] = card.getRank();
+            i=i+1;
+        }
+        Arrays.sort(num);
+        for(int j = 0; j<4;j++)
+        {
+            if(num[j+1]-num[j] != 1)
+            {
+                STR = false;
+                break;
+
+            }
+        }
+
+        if(STR == false)
+        {
+            return  "NOTHING";
+        }
+        else
+        {
+            return "STRAIGHT";
+        }
+    }
+	
 	
 	
 	

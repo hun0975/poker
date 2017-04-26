@@ -102,4 +102,19 @@ public class EvaluatorTest {
 
     }
 	
+	@Test
+    public void RANK가_5개가_연속으로이어지면_스트레이트다(){
+        Evaluator evaluator = new Evaluator();
+        List<Card> cardList = Arrays.asList(
+                new Card(1,Suit.CLUBS),
+                new Card(2,Suit.HEARTS),
+                new Card(3,Suit.SPADES),
+                new Card(4,Suit.DIAMONDS),
+                new Card(5,Suit.CLUBS)
+        );
+        String result = evaluator.evaluate_STRAIGHT(cardList);
+        assertThat(result, is("STRAIGHT"));
+
+    }
+	
 }

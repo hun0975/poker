@@ -84,4 +84,34 @@ public class Evaluator {
         }
     }
 	
+	public String evaluate_TRIPLE(List<Card> cardList){
+        Map<Integer, Integer> tempMap = new HashMap<Integer, Integer>();
+        int one =0;
+
+        for (Card card : cardList) {
+            if (tempMap.containsKey(card.getRank())) {
+                Integer count = tempMap.get(card.getRank());
+                count = new Integer(count.intValue() + 1);
+                tempMap.put(card.getRank(), count);
+            } else {
+                tempMap.put(card.getRank(), new Integer(1));
+            }
+        }
+
+        for (Integer key : tempMap.keySet()) {
+            if (tempMap.get(key) == 3) {
+                one = one + 1;
+            }
+        }
+        if(one == 1)
+        {
+            return "TRIPLE";
+        }
+        else{
+            return  "NOTHING";
+        }
+    }
+	
+	
+	
 }

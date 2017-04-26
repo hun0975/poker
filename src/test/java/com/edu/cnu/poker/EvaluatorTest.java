@@ -131,4 +131,18 @@ public class EvaluatorTest {
         assertThat(result, is("STRAIGHTFLUSH"));
     }
 	
+	@Test
+    public void RANK가_1_10_11_12_13으로이어지고_SUIT가_모두같으면_로얄플러쉬다(){
+        Evaluator evaluator = new Evaluator();
+        List<Card> cardList = Arrays.asList(
+                new Card(1,Suit.CLUBS),
+                new Card(11,Suit.CLUBS),
+                new Card(12,Suit.CLUBS),
+                new Card(13,Suit.CLUBS),
+                new Card(10,Suit.CLUBS)
+        );
+        String result = evaluator.evaluate_ROYALFLUSH(cardList);
+        assertThat(result, is("ROYALFLUSH"));
+    }
+	
 }

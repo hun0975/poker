@@ -87,4 +87,19 @@ public class EvaluatorTest {
 
     }
 	
+	@Test
+    public void RANK가_4개가_동일한것이_1세트면_포카드다(){
+        Evaluator evaluator = new Evaluator();
+        List<Card> cardList = Arrays.asList(
+                new Card(1,Suit.CLUBS),
+                new Card(1,Suit.HEARTS),
+                new Card(1,Suit.SPADES),
+                new Card(1,Suit.DIAMONDS),
+                new Card(8,Suit.CLUBS)
+        );
+        String result = evaluator.evaluate_FOURCARD(cardList);
+        assertThat(result, is("FOURCARD"));
+
+    }
+	
 }

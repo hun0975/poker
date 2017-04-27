@@ -139,7 +139,7 @@ public class Evaluator {
                 two = two + 1;
             }
         }
-        if(one == 1 & two ==1)
+        if(one == 1 && two ==1)
         {
             return "FULLHOUSE";
         }
@@ -177,8 +177,7 @@ public class Evaluator {
     }
 	
 	public String evaluate_STRAIGHT(List<Card> cardList){
-        Map<Integer, Integer> tempMap = new HashMap<Integer, Integer>();
-        int num[] = new int[5];
+        int[] num = new int[5];
         int i = 0;
         boolean STR = true;
         for (Card card : cardList) {
@@ -206,7 +205,6 @@ public class Evaluator {
     }
 	
 	public String evaluate_STRAIGHTFLUSH(List<Card> cardList){
-        Map<Integer, Integer> tempMap = new HashMap<Integer, Integer>();
         int num[] = new int[5];
         String pic[] = new String[5];
         int i = 0;
@@ -242,7 +240,6 @@ public class Evaluator {
     }
 	
 	public String evaluate_ROYALFLUSH(List<Card> cardList){
-        Map<Integer, Integer> tempMap = new HashMap<Integer, Integer>();
         int num[] = new int[5];
         String pic[] = new String[5];
         int i = 0;

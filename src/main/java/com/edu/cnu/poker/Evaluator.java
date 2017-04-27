@@ -44,7 +44,8 @@ public class Evaluator {
             }
         }
         for (Integer key : tempMap.keySet()) {
-            if (tempMap.get(key) == 2) {
+            int num = tempMap.get(key);
+            if (num == 2) {
                 one = one + 1;
             }
         }
@@ -72,7 +73,8 @@ public class Evaluator {
         }
 
         for (Integer key : tempMap.keySet()) {
-            if (tempMap.get(key) == 2) {
+            int num = tempMap.get(key);
+            if (num == 2) {
                 one = one + 1;
             }
         }
@@ -100,7 +102,8 @@ public class Evaluator {
         }
 
         for (Integer key : tempMap.keySet()) {
-            if (tempMap.get(key) == 3) {
+            int num = tempMap.get(key);
+            if (num == 3) {
                 one = one + 1;
             }
         }
@@ -128,10 +131,11 @@ public class Evaluator {
         }
 
         for (Integer key : tempMap.keySet()) {
-            if (tempMap.get(key) == 3) {
+            int num = tempMap.get(key);
+            if (num == 3) {
                 one = one + 1;
             }
-            if (tempMap.get(key) == 2){
+            if (num == 2){
                 two = two + 1;
             }
         }
@@ -158,7 +162,8 @@ public class Evaluator {
         }
 
         for (Integer key : tempMap.keySet()) {
-            if (tempMap.get(key) == 4) {
+            int num = tempMap.get(key);
+            if (num == 4) {
                 one = one + 1;
             }
         }

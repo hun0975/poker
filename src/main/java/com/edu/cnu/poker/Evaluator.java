@@ -194,7 +194,7 @@ public class Evaluator {
 
             }
         }
-        if(STR == false)
+        if(!STR)
         {
             return  "NOTHING";
         }
@@ -205,8 +205,8 @@ public class Evaluator {
     }
 	
 	public String evaluate_STRAIGHTFLUSH(List<Card> cardList){
-        int num[] = new int[5];
-        String pic[] = new String[5];
+        int[] num = new int[5];
+        String[] pic = new String[5];
         int i = 0;
         boolean STR = true;
         for (Card card : cardList) {
@@ -217,19 +217,14 @@ public class Evaluator {
         Arrays.sort(num);
         for(int j = 0; j<4;j++)
         {
-            if(num[j+1]-num[j] != 1)
-            {
-                STR = false;
-                break;
-            }
-            if(pic[j+1].equals(pic[j]) == false)
+            if(num[j+1]-num[j] != 1 || !pic[j+1].equals(pic[j]))
             {
                 STR = false;
                 break;
             }
         }
 
-        if(STR == false)
+        if(!STR)
         {
             return  "NOTHING";
         }
@@ -240,8 +235,8 @@ public class Evaluator {
     }
 	
 	public String evaluate_ROYALFLUSH(List<Card> cardList){
-        int num[] = new int[5];
-        String pic[] = new String[5];
+        int[] num = new int[5];
+        String[] pic = new String[5];
         int i = 0;
         boolean STR = true;
         for (Card card : cardList) {
@@ -252,12 +247,8 @@ public class Evaluator {
         Arrays.sort(num);
         for(int j = 0; j<4;j++)
         {
-            if(num[j+1] < 10)
+            if(num[j+1] < 10 || !pic[j+1].equals(pic[j]))
             {
-                STR = false;
-                break;
-            }
-            if(pic[j+1].equals(pic[j]) == false) {
                 STR = false;
                 break;
             }
@@ -267,7 +258,7 @@ public class Evaluator {
             STR = false;
         }
 
-        if(STR == false)
+        if(!STR)
         {
             return  "NOTHING";
         }

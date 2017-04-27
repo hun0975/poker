@@ -1,5 +1,6 @@
 package com.edu.cnu.poker;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -14,10 +15,10 @@ public class Evaluator {
         for (Card card : cardList) {
             if (tempMap.containsKey(card.getSuit())) {
                 Integer count = tempMap.get(card.getSuit());
-                count = new Integer(count.intValue() + 1);
+                count = Integer.valueOf(count.intValue() + 1);
                 tempMap.put(card.getSuit(), count);
             } else {
-                tempMap.put(card.getSuit(), new Integer(1));
+                tempMap.put(card.getSuit(), Integer.valueOf(1));
             }
         }
 
@@ -36,10 +37,10 @@ public class Evaluator {
         for (Card card : cardList) {
             if (tempMap.containsKey(card.getRank())) {
                 Integer count = tempMap.get(card.getRank());
-                count = new Integer(count.intValue() + 1);
+                count = Integer.valueOf(count.intValue() + 1);
                 tempMap.put(card.getRank(), count);
             } else {
-                tempMap.put(card.getRank(), new Integer(1));
+                tempMap.put(card.getRank(), Integer.valueOf(1));
             }
         }
         for (Integer key : tempMap.keySet()) {
@@ -63,10 +64,10 @@ public class Evaluator {
         for (Card card : cardList) {
             if (tempMap.containsKey(card.getRank())) {
                 Integer count = tempMap.get(card.getRank());
-                count = new Integer(count.intValue() + 1);
+                count = Integer.valueOf(count.intValue() + 1);
                 tempMap.put(card.getRank(), count);
             } else {
-                tempMap.put(card.getRank(), new Integer(1));
+                tempMap.put(card.getRank(), Integer.valueOf(1));
             }
         }
 
@@ -91,10 +92,10 @@ public class Evaluator {
         for (Card card : cardList) {
             if (tempMap.containsKey(card.getRank())) {
                 Integer count = tempMap.get(card.getRank());
-                count = new Integer(count.intValue() + 1);
+                count = Integer.valueOf(count.intValue() + 1);
                 tempMap.put(card.getRank(), count);
             } else {
-                tempMap.put(card.getRank(), new Integer(1));
+                tempMap.put(card.getRank(), Integer.valueOf(1));
             }
         }
 
@@ -119,10 +120,10 @@ public class Evaluator {
         for (Card card : cardList) {
             if (tempMap.containsKey(card.getRank())) {
                 Integer count = tempMap.get(card.getRank());
-                count = new Integer(count.intValue() + 1);
+                count = Integer.valueOf(count.intValue() + 1);
                 tempMap.put(card.getRank(), count);
             } else {
-                tempMap.put(card.getRank(), new Integer(1));
+                tempMap.put(card.getRank(), Integer.valueOf(1));
             }
         }
 
@@ -149,10 +150,10 @@ public class Evaluator {
         for (Card card : cardList) {
             if (tempMap.containsKey(card.getRank())) {
                 Integer count = tempMap.get(card.getRank());
-                count = new Integer(count.intValue() + 1);
+                count = Integer.valueOf(count.intValue() + 1);
                 tempMap.put(card.getRank(), count);
             } else {
-                tempMap.put(card.getRank(), new Integer(1));
+                tempMap.put(card.getRank(), Integer.valueOf(1));
             }
         }
 
@@ -189,7 +190,6 @@ public class Evaluator {
 
             }
         }
-
         if(STR == false)
         {
             return  "NOTHING";

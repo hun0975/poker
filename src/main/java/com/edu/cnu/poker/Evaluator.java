@@ -130,8 +130,8 @@ public class Evaluator {
             }
         }
 
-        for (Integer key : tempMap.keySet()) {
-            int num = tempMap.get(key);
+        for (Map.Entry<Integer, Integer> key : tempMap.entrySet()) {
+            int num = key.getKey();
             if (num == 3) {
                 one = one + 1;
             }
@@ -161,8 +161,8 @@ public class Evaluator {
             }
         }
 
-        for (Integer key : tempMap.keySet()) {
-            int num = tempMap.get(key);
+        for (Map.Entry<Integer, Integer> key : tempMap.entrySet()) {
+            int num = key.getKey();
             if (num == 4) {
                 one = one + 1;
             }
